@@ -1,0 +1,63 @@
+.cadre{
+    margin-top: 80px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+h1{
+    padding-top: 50px;
+    text-align : left;
+    font-size: 3em !important;
+    color: #17191A;
+}
+
+h2{
+    text-align : left;
+    font-size: 1.5em !important;
+    width: 100%;
+    color: #8F9EA5;
+}
+
+.profilContainer{
+    position: absolute;
+}
+
+.profil{
+    border-radius: 50%;
+    max-width: 20em;
+    height: auto;
+    float: right;
+    border: 8px solid white;
+    position: absolute;
+}
+
+#circle {
+    width: 20em;
+    height: 20em;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #559EED;
+    float: right;
+    position: absolute;
+    z-index: -1;
+    margin-left: 100px;
+}
+
+h3 {
+    margin-top: 80px !important;
+    list-style-type: none;
+    text-align: left;
+    font-weight: 300 !important;
+    font-size: x-large !important;
+}
+
+#square {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: -1;
+    background: #6CD09B;
+    left: -30px;
+    transform: rotate(20deg);
+}
