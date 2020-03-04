@@ -3,14 +3,15 @@ import '../css/Navbar.css';
 
 
 class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
             <nav className="navbar navbar-expand-md navbar-light bg-white myNav">
-                <a className="navbar-brand" href="#">My Portfolio</a>
+
+                    <a className="navbar-brand" href="#">
+                        <img id="contactIcon" src={require('../img/contact_icon.png')} alt={"icon"} href="#"/>
+                        Me contacter
+                    </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -21,10 +22,16 @@ class Navbar extends React.Component {
                             <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#">Features</a>
+                            <a className="nav-link" href="#">Mes projets</a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#">Pricing</a>
+                            <a className="nav-link" href="#">Mon parcours</a>
+                        </li>
+                        <li className="nav-item mx-3">
+                            <img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"} href="#"/>
+                        </li>
+                        <li className="nav-item mx-3">
+                            <img className="icon" src={require('../img/email_icon.png')} alt={"icon"} href="#"/>
                         </li>
                     </ul>
                 </div>

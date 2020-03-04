@@ -26,10 +26,11 @@ h2{
     border-radius: 50%;
     max-width: 20em;
     height: auto;
-    float: right;
+    float: top;
     border: 8px solid white;
     position: absolute;
 }
+
 
 #circle {
     width: 20em;
