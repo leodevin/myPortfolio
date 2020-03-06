@@ -1,0 +1,96 @@
+.projetContainer{
+    margin-top: 150px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.imageProjet{
+    margin-top: 100px;
+    border-radius: 5%;
+    max-width: 20em;
+    height: 20em;
+    float: left;
+    border: 8px solid white;
+    object-fit: cover;
+}
+
+#titreProjet1{
+    padding-top: 100px;
+    text-align : right;
+    font-size: 2em !important;
+    color: #17191A;
+ }
+
+#texteProjet1{
+    padding-top: 20px;
+    text-align : right;
+    font-size: 1.5em !important;
+    width: 100%;
+    color: #8F9EA5;
+}
+
+#titreProjet2{
+    padding-top: 100px;
+    text-align : left;
+    font-size: 2em !important;
+    color: #17191A;
+}
+
+#texteProjet2{
+    padding-top: 20px;
+    text-align : left;
+    font-size: 1.5em !important;
+    width: 100%;
+    color: #8F9EA5;
+}
+
+#bar1{
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+    background: #559EED;
+    top: 200px;
+    left: -250px;
+    transform: rotate(-37deg);
+    border-radius: 2px;
+}
+
+#square2 {
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    z-index: -1;
+    background: #6CD09B;
+    top: 90px;
+    border-radius: 3px;
+    transform: rotate(20deg);
+}
+
+#square3 {
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    z-index: -1;
+    background: #559EED;
+    top: 90px;
+    left: -2px;
+    border-radius: 3px;
+    transform: rotate(-20deg);
+}
+
+/**********************************    MEDIA QUERIES   ***************************************/
+
+@media screen and (max-width: 1000px) {
+    #texteProjet1{
+        font-size: 1.3em !important;
+    }
+
+    .imageProjet{
+        vertical-align: center;
+        horiz-align: center;
+        max-width: 15em;
+        height: 15em;
+    }
+}
+
