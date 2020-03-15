@@ -1,0 +1,45 @@
+.competenceContainer{
+    margin-top: 150px;
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+}
+
+.imgCompetence{
+    margin-top: 50px;
+    max-width: 80%;
+    height: auto;
+}
+
+.competenceTitle{
+    text-align: center;
+    font-weight: 400 !important;
+    width: fit-content;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #559EED !important;
+}
+
+#squareCompetence {
+    width: 297px;
+    height: 297px;
+    position: absolute;
+    z-index: -1;
+    background: #6CD09B;
+    top: 90px;
+    left: -460px;
+    border-radius: 3px;
+    transform: rotate(30deg);
+}
+
+#bigSquareCompetence{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+    background: #559EED;
+    top: -390px;
+    right: -660px;
+    border-radius: 3px;
+    transform: rotate(30deg);
+}

@@ -1,12 +1,13 @@
 import React from "react";
 import '../css/Projectpage.css';
+import '../../node_modules/animate.css';
 
 
 class Projectpage extends React.Component {
 
     render() {
         return (
-            <div className="projetContainer">
+            <div className="projetContainer" id="mesProjets">
                 <h1 style={{textAlign:"center"}}> Mes Projets </h1>
                 <div className="container">
                     <div className="row">
@@ -24,13 +25,13 @@ class Projectpage extends React.Component {
                 </div>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-7 col-md-6">
+                        <div className="col-lg-7 col-md-6 order-md-1 order-2">
                             <div id="titreProjet2">Projet solidaire à Madagascar</div>
                             <div id="texteProjet2">Projet en équipe (5 amis) dans le cadre des scouts et guides de France.
                                 La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants
                                 (babysitting, organisation de réception, déménagement etc).</div>
                         </div>
-                        <div className="col-lg-5 col-md-6">
+                        <div className="col-lg-5 col-md-6 order-md-2 order-1">
                             <div id="square2"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
                         </div>
@@ -52,6 +53,7 @@ class Projectpage extends React.Component {
                     </div>
                 </div>
             </div>
+
         )
 
     }
