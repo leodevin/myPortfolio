@@ -12,7 +12,6 @@ class Competence extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
-                            <div id="squareCompetence"/>
                             <h3 className="competenceTitle">Programmation</h3>
                             <img className="imgCompetence" src={require('../img/programmation_icones.png')}/>
                         </div>

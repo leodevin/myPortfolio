@@ -6,6 +6,7 @@ import Frontpage from "./components/Frontpage";
 import Projectpage from "./components/Projectpage";
 import Parcours from "./components/Parcours";
 import Competence from "./components/Competence";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
       <Projectpage/>
       <Parcours/>
       <Competence/>
+      <Footer/>
     </div>
   );
 }
+
+
 
 export default App;

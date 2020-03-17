@@ -1,16 +1,15 @@
 import React from "react";
 import '../css/Navbar.css';
 
-
 class Navbar extends React.Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-md navbar-light bg-white myNav">
+            <nav id="Home" className="navbar navbar-expand-md navbar-light bg-white shadow-none myNav">
 
-                    <a className="navbar-brand" href="#">
-                        <img id="contactIcon" src={require('../img/contact_icon.png')} alt={"icon"} href="#"/>
-                        Me contacter
+                    <a id="madeInReact" className="navbar-brand" href="#Home">
+                        <img id="contactIcon" src={require('../img/logo_react.svg')} alt={"icon"} href="#"/>
+                        Mon portfolio en ReactJS
                     </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +18,13 @@ class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav ml-auto mr-5 ">
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href="#Home">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#mesProjets">Mes projets</a>
+                            <a className="nav-link" href="#mesProjets">Projets</a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#">Mon parcours</a>
+                            <a className="nav-link" href="#monParcours">Parcours</a>
                         </li>
                         <li className="nav-item mx-3">
                             <img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"} href="#"/>

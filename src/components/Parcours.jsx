@@ -7,7 +7,7 @@ class Parcours extends React.Component {
 
     render() {
         return (
-            <div className="parcoursContainer">
+            <div id="monParcours" className="parcoursContainer">
                 <h1 style={{textAlign:"center"}}> Mon parcours </h1>
                 <img style={{marginTop:"100px"}} src={require('../img/portfolio_parcours.svg')}/>
             </div>

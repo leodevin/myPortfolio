@@ -12,7 +12,18 @@
 }
 
 #contactIcon{
-    max-width: 25px;
+    max-width: 35px;
     vertical-align: center;
     padding-right: 5px;
 }
+
+@media screen and (max-width: 1200px) {
+    #madeInReact{
+        font-size: 0.8rem;
+    }
+    .nav-link{
+        font-size: 0.8rem !important;
+    }
+}
+
+

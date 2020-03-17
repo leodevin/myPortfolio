@@ -26,7 +26,7 @@
     position: absolute;
     z-index: -1;
     background: #6CD09B;
-    top: 90px;
+    bottom: 90px;
     left: -460px;
     border-radius: 3px;
     transform: rotate(30deg);
