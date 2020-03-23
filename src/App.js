@@ -8,6 +8,7 @@ import Parcours from "./components/Parcours";
 import Competence from "./components/Competence";
 import Footer from "./components/Footer";
 
+
 function App() {
   return (
     <div className="App">

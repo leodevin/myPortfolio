@@ -1,8 +1,22 @@
 import React from "react";
 import '../css/Frontpage.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+
+
 
 class Frontpage extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    componentDidMount(){
+        AOS.init({
+            duration : 1000
+        })
+    }
 
     render() {
         return (
@@ -15,8 +29,8 @@ class Frontpage extends React.Component {
                                 Réseaux et Services.</h2>
                         </div>
                         <div className="col-lg-5 col-md-4 d-none d-lg-block profilContainer">
-                            <img className="profil mr-xl-5" src={require('../img/myProfil2.jpg')} alt={"Avatar"} />
-                            <div id="circle"></div>
+                            <img className="profil mr-xl-5 show-on-scroll" src={require('../img/myProfil2.jpg')} alt={"Avatar"} />
+                            <div data-aos='fade-up' id="circle" ></div>
                         </div>
                         <div className="col-lg-3 col-6">
                             <h3>
@@ -34,7 +48,7 @@ class Frontpage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div id="square"/>
+                <div data-aos='fade-right' id="square"/>
             </div>
         )
 

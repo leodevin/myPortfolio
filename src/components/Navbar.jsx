@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/Navbar.css';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 class Navbar extends React.Component {
 
@@ -21,16 +22,32 @@ class Navbar extends React.Component {
                             <a className="nav-link" href="#Home">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#mesProjets">Projets</a>
+                            <Link
+                                activeClass="active"
+                                to="mesProjets"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                                clasName="nav-link">
+                                <a className="nav-link">Projets</a></Link>
                         </li>
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#monParcours">Parcours</a>
+                            <Link
+                                activeClass="active"
+                                to="monParcours"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                                clasName="nav-link">
+                                <a className="nav-link">Parcours</a></Link>
                         </li>
                         <li className="nav-item mx-3">
-                            <img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"} href="#"/>
+                            <a href="https://www.linkedin.com/in/léonard-devincre-861308151/"><img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"}/></a>
                         </li>
                         <li className="nav-item mx-3">
-                            <img className="icon" src={require('../img/email_icon.png')} alt={"icon"} href="#"/>
+                            <a href="mailto:leonard.devincre@free.fr"><img className="icon" src={require('../img/email_icon.png')} alt={"icon"} href="#"/></a>
                         </li>
                     </ul>
                 </div>

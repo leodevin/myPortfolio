@@ -1,9 +1,19 @@
 import React from "react";
 import '../css/Projectpage.css';
 import '../../node_modules/animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 class Projectpage extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    componentDidMount(){
+        AOS.init({
+            duration : 1000
+        })
+    }
 
     render() {
         return (
@@ -12,7 +22,7 @@ class Projectpage extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className=" col-lg-5 col-md-6">
-                            <div id="bar1"/>
+                            <div data-aos="zoom-in-right" id="bar1"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')}/>
                         </div>
                         <div className="col-lg-7 col-md-6">
@@ -32,7 +42,7 @@ class Projectpage extends React.Component {
                                 (babysitting, organisation de réception, déménagement etc).</div>
                         </div>
                         <div className="col-lg-5 col-md-6 order-md-2 order-1">
-                            <div id="square2"/>
+                            <div data-aos="zoom-out-down" id="square2"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
                         </div>
                     </div>
@@ -40,7 +50,7 @@ class Projectpage extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className=" col-lg-5 col-md-6">
-                            <div id="square3"/>
+                            <div data-aos="zoom-out-down" id="square3"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
                         </div>
                         <div className="col-lg-7 col-md-6">
