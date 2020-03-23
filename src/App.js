@@ -11,6 +11,10 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
+        <a className="cvButton"  href={`${process.env.PUBLIC_URL}/docs/CV_L.DEVINCRE.pdf`} target='_blank' download>
+            <div className="textCVButton">Mon CV</div>
+            <img className="imgCV" alt="icon" src={require('../src/img/download.png')}/>
+        </a>
       <Navbar/>
       <Frontpage/>
       <Projectpage/>
