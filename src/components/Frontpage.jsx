@@ -30,7 +30,7 @@ class Frontpage extends React.Component {
                             <img className="profil mr-xl-5 show-on-scroll" src={require('../img/myProfil2.jpg')} alt={"Avatar"} />
                             <div data-aos='fade-up' id="circle" ></div>
                         </div>
-                        <div className="col-lg-3 col-6">
+                        <div className="col-lg-3 col-md-6 col-7">
                             <h3>
                                 <p>Etude de signaux</p>
                                 <p>Gammification</p>
@@ -38,7 +38,7 @@ class Frontpage extends React.Component {
                                 <p>Internet of Things (IOT)</p>
                             </h3>
                         </div>
-                        <div className="col-lg-3 col-6">
+                        <div className="col-lg-3 col-md-6 col-5">
                             <h3>
                                 <p> Lean Startup</p>
                                 <p>Modern management</p>
