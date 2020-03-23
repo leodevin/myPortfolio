@@ -18,10 +18,6 @@ h2{
     color: #8F9EA5;
 }
 
-.profilContainer{
-    position: absolute;
-    float: right;
-}
 
 .profil{
     border-radius: 50%;
@@ -36,14 +32,11 @@ h2{
 #circle {
     width: 20em;
     height: 20em;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
     border-radius: 100%;
     background: #559EED;
     float: right;
     position: absolute;
     z-index: -1;
-    margin-left: 100px;
 }
 
 h3 {

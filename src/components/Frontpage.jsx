@@ -26,7 +26,7 @@ class Frontpage extends React.Component {
                             <h2>Bonjour, je m’appel Léonard Devincre et je suis étudiant en école d’ingénieur spécialisé en Objets connectés,
                                 Réseaux et Services.</h2>
                         </div>
-                        <div className="col-lg-5 col-md-4 d-none d-lg-block profilContainer">
+                        <div className="col-lg-5 col-md-4 d-none d-lg-block">
                             <img className="profil mr-xl-5 show-on-scroll" src={require('../img/myProfil2.jpg')} alt={"Avatar"} />
                             <div data-aos='fade-up' id="circle" ></div>
                         </div>
