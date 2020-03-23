@@ -20,6 +20,7 @@ h2{
 
 .profilContainer{
     position: absolute;
+    float: right;
 }
 
 .profil{
