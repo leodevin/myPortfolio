@@ -9,7 +9,7 @@ class Competence extends React.Component {
         return (
             <div className="competenceContainer">
                 <h1 style={{textAlign:"center"}}> Mes compétences </h1>
-                <div className="container">
+                <div id="mesCompetences" className="container">
                     <div className="row">
                         <div className="col-md-4">
                             <h3 className="competenceTitle">Programmation</h3>

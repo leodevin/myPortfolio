@@ -19,9 +19,6 @@ class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav ml-auto mr-5 ">
                         <li className="nav-item mx-3">
-                            <a className="nav-link" href="#Home">Home <span className="sr-only">(current)</span></a>
-                        </li>
-                        <li className="nav-item mx-3">
                             <Link
                                 activeClass="active"
                                 to="mesProjets"
@@ -42,6 +39,17 @@ class Navbar extends React.Component {
                                 duration= {500}
                                 clasName="nav-link">
                                 <a className="nav-link">Parcours</a></Link>
+                        </li>
+                        <li className="nav-item mx-3">
+                            <Link
+                                activeClass="active"
+                                to="mesCompetences"
+                                spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration= {500}
+                                clasName="nav-link">
+                                <a className="nav-link">Compétences</a></Link>
                         </li>
                         <li className="nav-item mx-3">
                             <a href="https://www.linkedin.com/in/léonard-devincre-861308151/"><img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"}/></a>

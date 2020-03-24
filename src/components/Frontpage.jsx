@@ -23,7 +23,7 @@ class Frontpage extends React.Component {
                     <div className="row">
                         <div className="col-lg-7 col-md-12">
                             <h1>Léonard Devincre</h1>
-                            <h2>Bonjour, je m’appel Léonard Devincre et je suis étudiant en école d’ingénieur spécialisé en Objets connectés,
+                            <h2>Bonjour, je m’appelle Léonard Devincre et je suis étudiant en école d’ingénieur spécialisé en Objets connectés,
                                 Réseaux et Services.</h2>
                         </div>
                         <div className="col-lg-5 col-md-4 d-none d-lg-block">
@@ -40,7 +40,7 @@ class Frontpage extends React.Component {
                         </div>
                         <div className="col-lg-3 col-md-6 col-5">
                             <h3>
-                                <p> Lean Startup</p>
+                                <p>Lean Startup</p>
                                 <p>Modern management</p>
                             </h3>
                         </div>
