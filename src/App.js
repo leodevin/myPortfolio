@@ -7,6 +7,7 @@ import Projectpage from "./components/Projectpage";
 import Parcours from "./components/Parcours";
 import Competence from "./components/Competence";
 import Footer from "./components/Footer";
+import Form from "./components/ModalRegisterForm";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Projectpage/>
       <Parcours/>
       <Competence/>
+      <Form/>
       <Footer/>
     </div>
   );
