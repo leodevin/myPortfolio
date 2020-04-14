@@ -96,3 +96,20 @@ html {
   width: 40px;
   padding-bottom: 30px;
 }
+
+@media screen and (max-width: 991px) {
+  .cvButton{
+    width: 75px;
+    height: 75px;
+    bottom:30px;
+    right:30px;
+  }
+  .textCVButton{
+    padding-top: 15px;
+    font-size: 15px;
+  }
+  .imgCV{
+    width: 30px;
+    padding-bottom: 22px;
+  }
+}
