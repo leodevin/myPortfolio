@@ -26,4 +26,11 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    .myNav{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
 

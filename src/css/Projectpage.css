@@ -114,4 +114,11 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    .projetContainer{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
 

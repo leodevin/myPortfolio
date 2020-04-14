@@ -7,7 +7,6 @@ class Navbar extends React.Component {
     render() {
         return (
             <nav id="Home" className="navbar navbar-expand-md navbar-light bg-white shadow-none myNav">
-
                     <a id="madeInReact" className="navbar-brand" href="#Home">
                         <img id="contactIcon" src={require('../img/logo_react.svg')} alt={"icon"} href="#"/>
                         Mon portfolio en ReactJS
