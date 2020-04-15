@@ -19,7 +19,10 @@ class Parcours extends React.Component {
         return (
             <div id="monParcours" className="parcoursContainer">
                 <h1 style={{textAlign:"center"}}> Mon parcours </h1>
-                <img data-aos="fade-right" style={{marginTop:"100px"}} src={require('../img/portfolio_parcours.svg')}/>
+                <picture>
+                    <source media="(min-width: 900px)" srcSet={require('../img/portfolio_parcours.svg')}/>
+                    <img data-aos="fade-right" style={{marginTop:"100px"}} src={require('../img/portfolio_parcours_vertical.svg')} alt="IfItDoesntMatchAnyMedia"/>
+                </picture>
             </div>
         )
 
