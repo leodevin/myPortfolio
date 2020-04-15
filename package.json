@@ -9,6 +9,7 @@
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
+    "framer-motion": "^1.10.3",
     "jquery": "^3.4.1",
     "mdbreact": "^4.25.3",
     "node-sass": "^4.13.1",
