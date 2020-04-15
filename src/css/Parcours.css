@@ -2,3 +2,16 @@
      margin-top: 150px;
      margin-right: 5%;
  }
+
+#parcoursSVG{
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 900px) {
+    .parcoursContainer{
+        margin-left: 3%;
+    }
+    #parcoursSVG{
+        margin-top:30px;
+    }
+}

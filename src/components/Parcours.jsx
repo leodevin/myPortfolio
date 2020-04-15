@@ -21,7 +21,7 @@ class Parcours extends React.Component {
                 <h1 style={{textAlign:"center"}}> Mon parcours </h1>
                 <picture>
                     <source media="(min-width: 900px)" srcSet={require('../img/portfolio_parcours.svg')}/>
-                    <img data-aos="fade-right" style={{marginTop:"100px"}} src={require('../img/portfolio_parcours_vertical.svg')} alt="IfItDoesntMatchAnyMedia"/>
+                    <img id="parcoursSVG" data-aos="fade-right" src={require('../img/portfolio_parcours_vertical.svg')} alt="IfItDoesntMatchAnyMedia"/>
                 </picture>
             </div>
         )
