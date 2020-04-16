@@ -83,7 +83,7 @@ class Frontpage extends React.Component {
                 </div>
                 <motion.div
                     initial={{ rotate:20}}
-                    animate={{ opacity:1, x:this.state.squareTransition}}
+                    animate={{ opacity:1, x:this.state.squareTransition*2}}
                     id="square"/>
             </motion.div>
         )

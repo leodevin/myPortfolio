@@ -10,10 +10,10 @@ class Projectpage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            barTransition: 1,
-            square1Transition: 1,
-            trigerSquareTransition: false,
-            square2Transition: 1
+            barTransition: 0,
+            square1Transition: 0,
+            square2Transition: 0,
+            trigerSquareTransition: false
         }
     }
     componentDidMount(){
@@ -29,11 +29,11 @@ class Projectpage extends React.Component {
         if((window.pageYOffset<1800)&&(window.pageYOffset>600)){
             this.state.barTransition = window.pageYOffset-600;
         }
-        if((window.pageYOffset<1800)&&(window.pageYOffset>900)){
-            this.state.square1Transition = window.pageYOffset-900;
+        if((window.pageYOffset<1800)&&(window.pageYOffset>1100)){
+            this.state.square1Transition = window.pageYOffset-1100;
         }
-        if(window.pageYOffset>1000){
-            this.state.trigerSquareTransition = true;
+        if((window.pageYOffset<1600)&&(window.pageYOffset>800)){
+            this.state.square2Transition = window.pageYOffset-600;
         }
         const winScroll =
             document.body.scrollTop || document.documentElement.scrollTop
@@ -95,9 +95,9 @@ class Projectpage extends React.Component {
                             <motion.div
                                 initial={{rotate:-20}}
                                 animate={{opacity:1,
-                                    scale:(this.state.square1Transition)/1000,
-                                    x:-(this.state.square1Transition/16),
-                                    y:(this.state.square1Transition/12)}}
+                                    scale:(this.state.square2Transition)/1000,
+                                    x:-(this.state.square2Transition/16),
+                                    y:(this.state.square2Transition/12)}}
                                 id="square3"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
                         </div>
