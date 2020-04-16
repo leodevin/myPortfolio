@@ -26,11 +26,11 @@ class Projectpage extends React.Component {
         window.removeEventListener('scroll', this.listenToScroll)
     }
     listenToScroll = () => {
-        if((window.pageYOffset<1800)&&(window.pageYOffset>600)){
+        if((window.pageYOffset<1800)&&(window.pageYOffset>100)){
             this.state.barTransition = window.pageYOffset-600;
         }
-        if((window.pageYOffset<1800)&&(window.pageYOffset>1100)){
-            this.state.square1Transition = window.pageYOffset-1100;
+        if((window.pageYOffset<1800)&&(window.pageYOffset>600)){
+            this.state.square1Transition = window.pageYOffset-600;
         }
         if((window.pageYOffset<2400)&&(window.pageYOffset>1400)){
             this.state.square2Transition = window.pageYOffset-200;
