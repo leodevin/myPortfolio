@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import '../css/Navbar.css';
 import { Link, animateScroll as scroll } from "react-scroll";
 
@@ -6,7 +7,12 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <nav id="Home" className="navbar navbar-expand-md navbar-light bg-white shadow-none myNav">
+            <motion.nav
+                initial={{y:1000}}
+                animate={{y:0}}
+                transition={{delay:2.5, duration: 1}}
+                id="Home"
+                className="navbar navbar-expand-md navbar-light bg-white shadow-none myNav">
 
                     <a id="madeInReact" className="navbar-brand" href="#Home">
                         <img id="contactIcon" src={require('../img/logo_react.svg')} alt={"icon"} href="#"/>
@@ -59,7 +65,7 @@ class Navbar extends React.Component {
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </motion.nav>
         )
 
     }

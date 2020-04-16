@@ -47,7 +47,11 @@ class Frontpage extends React.Component {
 
     render() {
         return (
-            <div className="cadre">
+            <motion.div
+                initial={{y:1000}}
+                animate={{y:0}}
+                transition={{delay:2.5, duration: 1}}
+                className="cadre">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-7 col-md-12">
@@ -78,10 +82,10 @@ class Frontpage extends React.Component {
                     </div>
                 </div>
                 <motion.div
-                    initial={{opacity: 0, x:-200, rotate:20}}
-                    animate={{opacity: 1, x:-200+ this.state.squareTransition}}
+                    initial={{ rotate:20}}
+                    animate={{ opacity:1, x:this.state.squareTransition}}
                     id="square"/>
-            </div>
+            </motion.div>
         )
 
     }

@@ -10,9 +10,10 @@ class Projectpage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            barTransition: 0,
+            barTransition: 1,
+            square1Transition: 1,
             trigerSquareTransition: false,
-            square2Transition: 0
+            square2Transition: 1
         }
     }
     componentDidMount(){
@@ -25,8 +26,11 @@ class Projectpage extends React.Component {
         window.removeEventListener('scroll', this.listenToScroll)
     }
     listenToScroll = () => {
-        if((window.pageYOffset<900)&&(window.pageYOffset>600)){
+        if((window.pageYOffset<1800)&&(window.pageYOffset>600)){
             this.state.barTransition = window.pageYOffset-600;
+        }
+        if((window.pageYOffset<1800)&&(window.pageYOffset>900)){
+            this.state.square1Transition = window.pageYOffset-900;
         }
         if(window.pageYOffset>1000){
             this.state.trigerSquareTransition = true;
@@ -52,7 +56,9 @@ class Projectpage extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className=" col-lg-5 col-md-6">
-                            <div
+                            <motion.div
+                                initial={{rotate:-37}}
+                                animate={{x:(this.state.barTransition/16), y:(this.state.barTransition/12)}}
                                 id="bar1"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')}/>
                         </div>
@@ -73,15 +79,12 @@ class Projectpage extends React.Component {
                                 (babysitting, organisation de réception, déménagement etc).</div>
                         </div>
                         <div className="col-lg-5 col-md-6 order-md-2 order-1">
-                            {this.state.trigerSquareTransition && (
-                                <motion.div
-                                initial={false}
+                            <motion.div
+                                initial={{rotate:20}}
                                 animate={{opacity:1,
-                                    scale: [1, 2, 2, 1, 1],
-                                    rotate: [0, 0, 270, 270, 20],
-                                    borderRadius: ["5%", "5%", "50%", "50%", "1%"],}}
-                                transition={{duration:1}} id="square2"/>
-                            )}
+                                    rotate:(20-(this.state.square1Transition/50)),
+                                    y:(this.state.square1Transition/12)}}
+                                id="square2"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
                         </div>
                     </div>
@@ -89,7 +92,13 @@ class Projectpage extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className=" col-lg-5 col-md-6">
-                            <div data-aos="zoom-out-down" id="square3"/>
+                            <motion.div
+                                initial={{rotate:-20}}
+                                animate={{opacity:1,
+                                    scale:(this.state.square1Transition)/1000,
+                                    x:-(this.state.square1Transition/16),
+                                    y:(this.state.square1Transition/12)}}
+                                id="square3"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
                         </div>
                         <div className="col-lg-7 col-md-6">

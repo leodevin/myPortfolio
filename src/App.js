@@ -24,24 +24,20 @@ function showPage() {
 function App() {
     return (
         <div onLoad={() => myFunction()}>
-            <div id="loader_background">
-                <motion.div
-                    id="loader"
-                    animate={{
-                        scale: [1, 2, 2, 1, 1],
-                        rotate: [0, 0, 270, 270, 0],
-                        borderRadius: ["20%", "20%", "50%", "50%", "20%"]
-                    }}
-                    transition={{
-                        duration: 1.5,
-                        ease: "easeInOut",
-                        times: [0, 0.2, 0.5, 0.8, 1],
-                        loop: Infinity,
-                        repeatDelay: 1
-                    }}
-                />
-            </div>
-            <div style={{display: "none"}} id="myDiv" className="App">
+            <motion.div
+                initial={{y:0}}
+                animate={{y: -500}}
+                transition={{delay:2, duration:0.5}}
+                id="loader_background">
+                <div className="loader">
+                    <svg viewBox="0 0 80 80">
+                        <circle id="test" cx="40" cy="40" r="32"></circle>
+                    </svg>
+                </div>
+            </motion.div>
+            <div
+                id="myDiv"
+                className="App">
                 <a className="cvButton"  href={`${process.env.PUBLIC_URL}/docs/CV_L.DEVINCRE.pdf`} target='_blank' download>
                     <div className="textCVButton">Mon CV</div>
                     <img className="imgCV" alt="icon" src={require('../src/img/download.png')}/>
