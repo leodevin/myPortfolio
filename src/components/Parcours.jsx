@@ -46,12 +46,8 @@ class Parcours extends React.Component {
             <div id="monParcours" className="parcoursContainer">
                 <h1 style={{textAlign:"center"}}> Mon parcours </h1>
                 <picture>
-                    <motion.source
-                        animate={{y:(-1000+this.state.pictureTransition)}}
-                        media="(min-width: 900px)" srcSet={require('../img/portfolio_parcours.svg')}/>
-                    <motion.img
-                        animate={{x:(-1000+this.state.pictureTransition)}}
-                        id="parcoursSVG" src={require('../img/portfolio_parcours_vertical.svg')} alt="IfItDoesntMatchAnyMedia"/>
+                    <source media="(min-width: 900px)" srcSet={require('../img/portfolio_parcours.svg')}/>
+                    <img id="parcoursSVG" src={require('../img/portfolio_parcours_vertical.svg')} alt="IfItDoesntMatchAnyMedia"/>
                 </picture>
             </div>
         )
