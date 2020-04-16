@@ -20,7 +20,6 @@ class Competence extends React.Component {
                             <img className="imgCompetence" src={require('../img/icone_langue.png')}/>
                         </div>
                         <div className="col-md-4">
-                            <div id="bigSquareCompetence"/>
                             <h3 className="competenceTitle">Associatifs</h3>
                             <img className="imgCompetence" src={require('../img/icone_associatif.png')}/>
                         </div>

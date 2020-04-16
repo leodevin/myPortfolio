@@ -11,8 +11,8 @@ class Projectpage extends React.Component {
         super(props);
         this.state = {
             barTransition: 0,
-            square1Transition:0,
-            square2Transition:0
+            trigerSquareTransition: false,
+            square2Transition: 0
         }
     }
     componentDidMount(){
@@ -28,8 +28,8 @@ class Projectpage extends React.Component {
         if((window.pageYOffset<900)&&(window.pageYOffset>600)){
             this.state.barTransition = window.pageYOffset-600;
         }
-        if(window.pageYOffset<2000){
-            this.state.square1Transition = window.pageYOffset;
+        if(window.pageYOffset>1000){
+            this.state.trigerSquareTransition = true;
         }
         const winScroll =
             document.body.scrollTop || document.documentElement.scrollTop
@@ -73,13 +73,15 @@ class Projectpage extends React.Component {
                                 (babysitting, organisation de réception, déménagement etc).</div>
                         </div>
                         <div className="col-lg-5 col-md-6 order-md-2 order-1">
-                            <motion.div
+                            {this.state.trigerSquareTransition && (
+                                <motion.div
                                 initial={false}
                                 animate={{opacity:1,
                                     scale: [1, 2, 2, 1, 1],
                                     rotate: [0, 0, 270, 270, 20],
                                     borderRadius: ["5%", "5%", "50%", "50%", "1%"],}}
-                                transition={{}} id="square2"/>
+                                transition={{duration:1}} id="square2"/>
+                            )}
                             <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
                         </div>
                     </div>
