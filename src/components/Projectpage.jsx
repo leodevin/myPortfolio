@@ -32,8 +32,8 @@ class Projectpage extends React.Component {
         if((window.pageYOffset<1800)&&(window.pageYOffset>1100)){
             this.state.square1Transition = window.pageYOffset-1100;
         }
-        if((window.pageYOffset<1600)&&(window.pageYOffset>800)){
-            this.state.square2Transition = window.pageYOffset-600;
+        if((window.pageYOffset<2400)&&(window.pageYOffset>1400)){
+            this.state.square2Transition = window.pageYOffset-200;
         }
         const winScroll =
             document.body.scrollTop || document.documentElement.scrollTop
@@ -95,7 +95,7 @@ class Projectpage extends React.Component {
                             <motion.div
                                 initial={{rotate:-20}}
                                 animate={{opacity:1,
-                                    scale:(this.state.square2Transition)/1000,
+                                    scale:(this.state.square2Transition)/2000,
                                     x:-(this.state.square2Transition/16),
                                     y:(this.state.square2Transition/12)}}
                                 id="square3"/>
