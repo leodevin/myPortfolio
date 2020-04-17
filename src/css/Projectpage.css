@@ -150,6 +150,13 @@
     #titreProjet2{
         padding-top: 50px;
     }
+
+    #concourTitle1{
+        font-size: 2em;
+    }
+    #concourTitle2{
+        font-size: 2em;
+    }
 }
 @media screen and (max-width: 991px) {
     .projetContainer{

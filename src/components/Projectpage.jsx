@@ -43,10 +43,15 @@ class Projectpage extends React.Component {
                 this.setState({titleToogled: true});
                 this.setState({titleReavealed: window.pageYOffset-2300})
             }
-        }else{
+        } else if(window.innerWidth>400){
             if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
                 this.setState({titleToogled: true});
                 this.setState({titleReavealed: window.pageYOffset-3500})
+            }
+        }else{
+            if((window.pageYOffset>3700) && (window.pageYOffset<3786)){
+                this.setState({titleToogled: true});
+                this.setState({titleReavealed: window.pageYOffset-3700})
             }
         }
 
