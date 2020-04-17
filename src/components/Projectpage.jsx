@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import '../css/Projectpage.css';
 import '../../node_modules/animate.css';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -13,41 +12,45 @@ class Projectpage extends React.Component {
             barTransition: 0,
             square1Transition: 0,
             square2Transition: 0,
-            trigerSquareTransition: false
+            titleToogled: false,
+            titleReavealed: 0,
         }
     }
-    componentDidMount(){
-        AOS.init({
-            duration : 1000
-        })
-        window.addEventListener('scroll', this.listenToScroll)
+    componentDidMount() {
+        window.addEventListener('scroll', this.parallaxShift);
     }
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.listenToScroll)
+        window.removeEventListener('scroll', this.parallaxShift);
     }
-    listenToScroll = () => {
+    parallaxShift = () => {
         if((window.pageYOffset<1800)&&(window.pageYOffset>100)){
-            this.state.barTransition = window.pageYOffset-600;
+            this.setState({barTransition: window.pageYOffset});
         }
         if((window.pageYOffset<1800)&&(window.pageYOffset>600)){
-            this.state.square1Transition = window.pageYOffset-600;
+            this.setState({square1Transition: window.pageYOffset});
         }
-        if((window.pageYOffset<2400)&&(window.pageYOffset>1400)){
-            this.state.square2Transition = window.pageYOffset-200;
+        if(window.innerWidth>1000){
+            if((window.pageYOffset<2400)&&(window.pageYOffset>1200)){
+                this.setState({square2Transition: window.pageYOffset});
+            }
+        }else{
+            if((window.pageYOffset<3300)&&(window.pageYOffset>1800)){
+                this.setState({square2Transition: (window.pageYOffset-1400)});
+            }
         }
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop
+        if(window.innerWidth>1000){
+            if((window.pageYOffset>2300) && (window.pageYOffset<2386)){
+                this.setState({titleToogled: true});
+                this.setState({titleReavealed: window.pageYOffset-2300})
+            }
+        }else{
+            if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
+                this.setState({titleToogled: true});
+                this.setState({titleReavealed: window.pageYOffset-3500})
+            }
+        }
 
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight
-
-        const scrolled = winScroll / height
-
-        this.setState({
-            theposition: scrolled,
-        })
-    }
+    };
 
     render() {
         return (
@@ -58,7 +61,7 @@ class Projectpage extends React.Component {
                         <div className=" col-lg-5 col-md-6">
                             <motion.div
                                 initial={{rotate:-37}}
-                                animate={{x:(this.state.barTransition/16), y:(this.state.barTransition/12)}}
+                                animate={{x:(this.state.barTransition/18), y:(this.state.barTransition/12)}}
                                 id="bar1"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')}/>
                         </div>
@@ -82,7 +85,7 @@ class Projectpage extends React.Component {
                             <motion.div
                                 initial={{rotate:20}}
                                 animate={{opacity:1,
-                                    rotate:(20-(this.state.square1Transition/50)),
+                                    x:(this.state.barTransition/18),
                                     y:(this.state.square1Transition/12)}}
                                 id="square2"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
@@ -92,13 +95,6 @@ class Projectpage extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className=" col-lg-5 col-md-6">
-                            <motion.div
-                                initial={{rotate:-20}}
-                                animate={{opacity:1,
-                                    scale:(this.state.square2Transition)/2000,
-                                    x:-(this.state.square2Transition/16),
-                                    y:(this.state.square2Transition/12)}}
-                                id="square3"/>
                             <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
                         </div>
                         <div className="col-lg-7 col-md-6">
@@ -110,6 +106,28 @@ class Projectpage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <motion.div animate={{scale:(1+this.state.square2Transition/380)}} id="square3"/>
+                <div id="recompense">
+                    { this.state.titleToogled &&
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12" id="containerConcourTitle1">
+                                <motion.div
+                                    id="concourTitle1"
+                                    initial={{ y: 86 * 1.2 }}
+                                    animate={{ y: 86-this.state.titleReavealed }}>Reveal from</motion.div>
+                            </div>
+                            <div className="col-12" id="containerConcourTitle2">
+                                <motion.div
+                                    id="concourTitle2"
+                                    initial={{ y: -86 * 1.2 }}
+                                    animate={{ y: this.state.titleReavealed-86 }}>the middle</motion.div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+
             </div>
 
         )

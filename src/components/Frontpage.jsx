@@ -1,8 +1,6 @@
 import React from "react";
 import '../css/Frontpage.css';
 import { motion } from "framer-motion";
-
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -15,35 +13,24 @@ class Frontpage extends React.Component {
             squareTransition:0,
         }
     }
-    componentDidMount(){
-        AOS.init({
-            duration : 1000
-        })
-        window.addEventListener('scroll', this.listenToScroll)
+    componentDidMount() {
+        window.addEventListener('scroll', this.parallaxShift);
     }
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.listenToScroll)
+        window.removeEventListener('scroll', this.parallaxShift);
     }
-    listenToScroll = () => {
+    parallaxShift = () => {
         if(window.pageYOffset<100){
-            this.state.circleTransition = window.pageYOffset;
+            this.setState({
+                circleTransition: window.pageYOffset
+            });
         }
         if(window.pageYOffset<400){
-            this.state.squareTransition = window.pageYOffset;
+            this.setState({
+                squareTransition: window.pageYOffset
+            });
         }
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop
-
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight
-
-        const scrolled = winScroll / height
-
-        this.setState({
-            theposition: scrolled,
-        })
-    }
+    };
 
     render() {
         return (

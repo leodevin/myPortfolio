@@ -1,5 +1,7 @@
 .parcoursContainer{
-     margin-top: 150px;
+    margin-top: 150px;
+    z-index: 0;
+    background-color: white;
  }
 
 #parcoursSVG{
@@ -7,9 +9,7 @@
 }
 
 @media screen and (max-width: 900px) {
-    .parcoursContainer{
-        margin-left: 3%;
-    }
+
     #parcoursSVG{
         margin-top:30px;
         margin-bottom: -250px;

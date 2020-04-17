@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import '../css/Parcours.css';
 import '../../node_modules/animate.css';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
@@ -13,33 +12,17 @@ class Parcours extends React.Component {
             pictureTransition: 0,
         }
     }
-    componentDidMount(){
-        AOS.init({
-            duration : 1000
-        })
-        window.addEventListener('scroll', this.listenToScroll)
+    componentDidMount() {
+        window.addEventListener('scroll', this.parallaxShift);
     }
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.listenToScroll)
+        window.removeEventListener('scroll', this.parallaxShift);
     }
-    listenToScroll = () => {
+    parallaxShift = () => {
         if((window.pageYOffset<2300)&&(window.pageYOffset>1300)){
-            this.state.pictureTransition = window.pageYOffset-1300;
+            this.setState({pictureTransition: window.pageYOffset});
         }
-
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop
-
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight
-
-        const scrolled = winScroll / height
-
-        this.setState({
-            theposition: scrolled,
-        })
-    }
+    };
 
     render() {
         return (
