@@ -28,7 +28,7 @@ class Frontpage extends React.Component {
         if(window.pageYOffset<100){
             this.state.circleTransition = window.pageYOffset;
         }
-        if(window.pageYOffset<200){
+        if(window.pageYOffset<400){
             this.state.squareTransition = window.pageYOffset;
         }
         const winScroll =
@@ -83,7 +83,7 @@ class Frontpage extends React.Component {
                 </div>
                 <motion.div
                     initial={{ rotate:20}}
-                    animate={{ opacity:1, x:this.state.squareTransition*2}}
+                    animate={{ opacity:1, x:this.state.squareTransition-230}}
                     id="square"/>
             </motion.div>
         )
