@@ -30,12 +30,12 @@ class Projectpage extends React.Component {
             this.setState({square1Transition: window.pageYOffset});
         }
         if(window.innerWidth>1000){
-            if((window.pageYOffset<2400)&&(window.pageYOffset>1200)){
-                this.setState({square2Transition: window.pageYOffset});
+            if((window.pageYOffset<2500)&&(window.pageYOffset>1700)){
+                this.setState({square2Transition: window.pageYOffset-1700});
             }
         }else{
-            if((window.pageYOffset<3300)&&(window.pageYOffset>1800)){
-                this.setState({square2Transition: (window.pageYOffset-1400)});
+            if((window.pageYOffset<3500)&&(window.pageYOffset>1800)){
+                this.setState({square2Transition: (window.pageYOffset-1500)});
             }
         }
         if(window.innerWidth>1000){
@@ -57,63 +57,65 @@ class Projectpage extends React.Component {
 
     };
 
+
     render() {
         return (
-            <div className="projetContainer" id="mesProjets">
-                <h1 style={{textAlign:"center"}}> Mes Projets </h1>
-                <div className="container">
-                    <div className="row">
-                        <div className=" col-lg-5 col-md-6">
-                            <motion.div
-                                initial={{rotate:-37}}
-                                animate={{x:(this.state.barTransition/18), y:(this.state.barTransition/12)}}
-                                id="bar1"/>
-                            <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')}/>
+            <div id="projetRecompenceContainer">
+                <div className="projetContainer" id="mesProjets">
+                    <h1 style={{textAlign:"center"}}> Mes Projets </h1>
+                    <div className="container">
+                        <div className="row">
+                            <div className=" col-lg-5 col-md-6">
+                                <motion.div
+                                    initial={{rotate:-37}}
+                                    animate={{x:(this.state.barTransition/18), y:(this.state.barTransition/12)}}
+                                    id="bar1"/>
+                                <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')}/>
+                            </div>
+                            <div className="col-lg-7 col-md-6">
+                                <div id="titreProjet1">Veelo</div>
+                                <div id="texteProjet1">Développement de sous gants connectés qui permettent aux livreurs à vélos de se déplacer en toute sécurité.
+                                    Notre système de communication innovant haptique envoie les informations de direction
+                                    à l’utilisateur en toute sécurité.</div>
+                            </div>
                         </div>
-                        <div className="col-lg-7 col-md-6">
-                            <div id="titreProjet1">Veelo</div>
-                            <div id="texteProjet1">Développement de sous gants connectés qui permettent aux livreurs à vélos de se déplacer en toute sécurité.
-                                Notre système de communication innovant haptique envoie les informations de direction
-                                à l’utilisateur en toute sécurité.</div>
+                    </div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-7 col-md-6 order-md-1 order-2">
+                                <div id="titreProjet2">Projet solidaire à Madagascar</div>
+                                <div id="texteProjet2">Projet en équipe (5 amis) dans le cadre des scouts et guides de France.
+                                    La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants
+                                    (babysitting, organisation de réception, déménagement etc).</div>
+                            </div>
+                            <div className="col-lg-5 col-md-6 order-md-2 order-1">
+                                <motion.div
+                                    initial={{rotate:20}}
+                                    animate={{opacity:1,
+                                        x:(this.state.barTransition/18),
+                                        y:(this.state.square1Transition/12)}}
+                                    id="square2"/>
+                                <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container">
+                        <div className="row">
+                            <div className=" col-lg-5 col-md-6">
+                                <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
+                            </div>
+                            <div className="col-lg-7 col-md-6">
+                                <div id="titreProjet1">Lampes connectées</div>
+                                <div id="texteProjet1">Commande de la luminosité, intensité et couleur de trois lampes HueLights
+                                    via une application Android. Utilisation du serveur CloudMQTT et d’une carte Arduino connecté,
+                                    via un shield-Ethernet. Découverte du fonctionnement des « Beacons » pour détecter via Bluetooth
+                                    les lampes à proximité.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-7 col-md-6 order-md-1 order-2">
-                            <div id="titreProjet2">Projet solidaire à Madagascar</div>
-                            <div id="texteProjet2">Projet en équipe (5 amis) dans le cadre des scouts et guides de France.
-                                La récolte de l’argent nécessaire à la réalisation du projet est dû à 2 ans de jobs étudiants
-                                (babysitting, organisation de réception, déménagement etc).</div>
-                        </div>
-                        <div className="col-lg-5 col-md-6 order-md-2 order-1">
-                            <motion.div
-                                initial={{rotate:20}}
-                                animate={{opacity:1,
-                                    x:(this.state.barTransition/18),
-                                    y:(this.state.square1Transition/12)}}
-                                id="square2"/>
-                            <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
-                        </div>
-                    </div>
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className=" col-lg-5 col-md-6">
-                            <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
-                        </div>
-                        <div className="col-lg-7 col-md-6">
-                            <div id="titreProjet1">Lampes connectées</div>
-                            <div id="texteProjet1">Commande de la luminosité, intensité et couleur de trois lampes HueLights
-                                via une application Android. Utilisation du serveur CloudMQTT et d’une carte Arduino connecté,
-                                via un shield-Ethernet. Découverte du fonctionnement des « Beacons » pour détecter via Bluetooth
-                                les lampes à proximité.</div>
-                        </div>
-                    </div>
-                </div>
-                <motion.div animate={{scale:(1+this.state.square2Transition/380)}} id="square3"/>
                 <div id="recompense">
-                    { this.state.titleToogled &&
+                    <motion.div  animate={{scale:(1+this.state.square2Transition/250)}} id="square3"/>
                     <div className="container">
                         <div className="row">
                             <div className="col-12" id="containerConcourTitle1">
@@ -130,10 +132,9 @@ class Projectpage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    }
                 </div>
-
             </div>
+
 
         )
 
