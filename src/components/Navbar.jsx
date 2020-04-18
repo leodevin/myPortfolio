@@ -10,7 +10,7 @@ class Navbar extends React.Component {
             <motion.nav
                 initial={{y:1000}}
                 animate={{y:0}}
-                transition={{delay:2.5, duration: 1}}
+                transition={{delay:2.5, duration: 0.5}}
                 id="Home"
                 className="navbar navbar-expand-md navbar-light bg-white shadow-none myNav">
 
