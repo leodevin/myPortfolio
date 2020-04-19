@@ -34,7 +34,7 @@ class Projectpage extends React.Component {
                 this.setState({square2Transition: window.pageYOffset-1700});
             }
         }else{
-            if((window.pageYOffset<3500)&&(window.pageYOffset>1800)){
+            if((window.pageYOffset<3200)&&(window.pageYOffset>1800)){
                 this.setState({square2Transition: (window.pageYOffset-1500)});
             }
         }
@@ -43,10 +43,25 @@ class Projectpage extends React.Component {
                 this.setState({titleToogled: true});
                 this.setState({titleReavealed: window.pageYOffset-2300})
             }
-        } else if(window.innerWidth>400){
-            if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
+        }else if(window.innerWidth>767){
+            if((window.pageYOffset>2600) && (window.pageYOffset<2686)){
                 this.setState({titleToogled: true});
-                this.setState({titleReavealed: window.pageYOffset-3500})
+                this.setState({titleReavealed: window.pageYOffset-2600})
+            }
+        }else if(window.innerWidth>600){
+            if((window.pageYOffset>3200) && (window.pageYOffset<3286)){
+                this.setState({titleToogled: true});
+                this.setState({titleReavealed: window.pageYOffset-3200})
+            }
+        }else if(window.innerWidth>500){
+             if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
+               this.setState({titleToogled: true});
+              this.setState({titleReavealed: window.pageYOffset-3500})
+              }
+        }else if(window.innerWidth>400){
+            if((window.pageYOffset>3400) && (window.pageYOffset<3486)){
+                this.setState({titleToogled: true});
+                this.setState({titleReavealed: window.pageYOffset-3400})
             }
         }else{
             if((window.pageYOffset>3700) && (window.pageYOffset<3786)){
@@ -114,21 +129,23 @@ class Projectpage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div id="recompense">
-                    <motion.div  animate={{scale:(1+this.state.square2Transition/250)}} id="square3"/>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12" id="containerConcourTitle1">
-                                <motion.div
-                                    id="concourTitle1"
-                                    initial={{ y: 86 * 1.2 }}
-                                    animate={{ y: 86-this.state.titleReavealed }}>Reveal from</motion.div>
-                            </div>
-                            <div className="col-12" id="containerConcourTitle2">
-                                <motion.div
-                                    id="concourTitle2"
-                                    initial={{ y: -86 * 1.2 }}
-                                    animate={{ y: this.state.titleReavealed-86 }}>the middle</motion.div>
+                <div id="superRecompenceContainer">
+                    <div id="recompense">
+                        <motion.div  animate={{scale:(1+this.state.square2Transition/250)}} id="square3"/>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12" id="containerConcourTitle1">
+                                    <motion.div
+                                        id="concourTitle1"
+                                        initial={{ y: 86 * 1.2 }}
+                                        animate={{ y: 86-this.state.titleReavealed }}>Reveal from</motion.div>
+                                </div>
+                                <div className="col-12" id="containerConcourTitle2">
+                                    <motion.div
+                                        id="concourTitle2"
+                                        initial={{ y: -86 * 1.2 }}
+                                        animate={{ y: this.state.titleReavealed-86 }}>the middle</motion.div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -83,6 +83,10 @@
     margin-top: 800px;
 }
 
+#superRecompenceContainer{
+    overflow: hidden;
+}
+
 #recompense{
     margin-top: 300px;
     background-color: #559EED;
