@@ -13,15 +13,15 @@ class Competence extends React.Component {
                     <div className="row">
                         <div className="col-md-4">
                             <h3 className="competenceTitle">Programmation</h3>
-                            <img className="imgCompetence" src={require('../img/programmation_icones.png')}/>
+                            <img className="imgCompetence" src={require('../img/programmation_icones.png')} alt="programmation_icones.png"/>
                         </div>
                         <div className="col-md-4">
                             <h3 className="competenceTitle">Langues</h3>
-                            <img className="imgCompetence" src={require('../img/icone_langue.png')}/>
+                            <img className="imgCompetence" src={require('../img/icone_langue.png')} alt="icone_langue.png"/>
                         </div>
                         <div className="col-md-4">
                             <h3 className="competenceTitle">Associatifs</h3>
-                            <img className="imgCompetence" src={require('../img/icone_associatif.png')}/>
+                            <img className="imgCompetence" src={require('../img/icone_associatif.png')} alt="icone_associatif.png"/>
                         </div>
                     </div>
                 </div>

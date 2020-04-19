@@ -24,9 +24,7 @@ class Footer extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a> Léonard Devincre</a>
-                </div>
+                <div className="footer-copyright text-center py-3">© 2020 Copyright: Léonard Devincre</div>
             </footer>
         )
 

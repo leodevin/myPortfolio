@@ -30,7 +30,7 @@ class Projectpage extends React.Component {
             this.setState({square1Transition: window.pageYOffset});
         }
         if(window.innerWidth>1000){
-            if((window.pageYOffset<2500)&&(window.pageYOffset>1700)){
+            if((window.pageYOffset<2200)&&(window.pageYOffset>1700)){
                 this.setState({square2Transition: window.pageYOffset-1700});
             }
         }else{
@@ -70,7 +70,7 @@ class Projectpage extends React.Component {
                                     initial={{rotate:-37}}
                                     animate={{x:(this.state.barTransition/18), y:(this.state.barTransition/12)}}
                                     id="bar1"/>
-                                <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')}/>
+                                <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')} alt="Veelo.png"/>
                             </div>
                             <div className="col-lg-7 col-md-6">
                                 <div id="titreProjet1">Veelo</div>
@@ -95,14 +95,14 @@ class Projectpage extends React.Component {
                                         x:(this.state.barTransition/18),
                                         y:(this.state.square1Transition/12)}}
                                     id="square2"/>
-                                <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')}/>
+                                <img className="imageProjet mr-xl-5" src={require('../img/madagascar.jpg')} alt="madagascar.png"/>
                             </div>
                         </div>
                     </div>
                     <div className="container">
                         <div className="row">
                             <div className=" col-lg-5 col-md-6">
-                                <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')}/>
+                                <img className="imageProjet mr-xl-5" src={require('../img/lumieres.jpg')} alt="lumieres.jpg"/>
                             </div>
                             <div className="col-lg-7 col-md-6">
                                 <div id="titreProjet1">Lampes connectées</div>

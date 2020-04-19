@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import '../css/Parcours.css';
 import '../../node_modules/animate.css';
 import 'aos/dist/aos.css';
