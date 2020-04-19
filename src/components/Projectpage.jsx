@@ -33,7 +33,7 @@ class Projectpage extends React.Component {
                 this.setState({square2Transition: window.pageYOffset-1700});
             }
         }else{
-            if((window.pageYOffset<3500)&&(window.pageYOffset>1800)){
+            if((window.pageYOffset<3300)&&(window.pageYOffset>1800)){
                 this.setState({square2Transition: (window.pageYOffset-1500)});
             }
         }
@@ -58,9 +58,9 @@ class Projectpage extends React.Component {
                 this.setState({titleReavealed: window.pageYOffset-3400})
             }
         }else{
-            if((window.pageYOffset>3700) && (window.pageYOffset<3786)){
+            if((window.pageYOffset>3800) && (window.pageYOffset<3886)){
                 this.setState({titleToogled: true});
-                this.setState({titleReavealed: window.pageYOffset-3700})
+                this.setState({titleReavealed: window.pageYOffset-3800})
             }
         }
 
