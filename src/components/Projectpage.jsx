@@ -38,28 +38,52 @@ class Projectpage extends React.Component {
             }
         }
         if(window.innerWidth>1000){
-            if((window.pageYOffset>2300) && (window.pageYOffset<2386)){
-                this.setState({titleReavealed: window.pageYOffset-2300})
+            if(window.pageYOffset>2300){
+                if(window.pageYOffset>2386){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-2300})
+                }
             }
         }else if(window.innerWidth>767){
-            if((window.pageYOffset>2600) && (window.pageYOffset<2686)){
-                this.setState({titleReavealed: window.pageYOffset-2600})
+            if(window.pageYOffset>2600){
+                if(window.pageYOffset>2686){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-2600})
+                }
             }
         }else if(window.innerWidth>600){
-            if((window.pageYOffset>3200) && (window.pageYOffset<3286)){
-                this.setState({titleReavealed: window.pageYOffset-3200})
+            if(window.pageYOffset>3200){
+                if(window.pageYOffset>3286){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-3200})
+                }
             }
         }else if(window.innerWidth>500){
-            if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
-                this.setState({titleReavealed: window.pageYOffset-3500})
+            if(window.pageYOffset>3500){
+                if(window.pageYOffset>3586){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-3500})
+                }
             }
         }else if(window.innerWidth>400){
-            if((window.pageYOffset>3400) && (window.pageYOffset<3486)){
-                this.setState({titleReavealed: window.pageYOffset-3400})
+            if(window.pageYOffset>3400){
+                if(window.pageYOffset>3486){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-3400})
+                }
             }
         }else{
-            if((window.pageYOffset>3800) && (window.pageYOffset<3886)){
-                this.setState({titleReavealed: window.pageYOffset-3800})
+            if(window.pageYOffset>3800){
+                if(window.pageYOffset>3886){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-3800})
+                }
             }
         }
 
