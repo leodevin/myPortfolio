@@ -134,6 +134,7 @@
 #whiteCircleRecompense{
     width: 400px;
     height: 400px;
+    margin: 0;
     position: relative;
     background: white;
     border-radius: 50%;
@@ -218,7 +219,7 @@
     }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 766px) {
     #titreProjet1{
         padding-top: 20px;
     }
@@ -236,6 +237,9 @@
     }
     #concourTitle2{
         font-size: 2em;
+    }
+    #whiteCircleRecompense{
+        margin: auto;
     }
 }
 @media screen and (max-width: 991px) {
