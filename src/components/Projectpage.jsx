@@ -50,16 +50,15 @@ class Projectpage extends React.Component {
                 this.setState({titleReavealed: window.pageYOffset-3200})
             }
         }else if(window.innerWidth>500){
-             if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
+            if((window.pageYOffset>3500) && (window.pageYOffset<3586)){
                 this.setState({titleReavealed: window.pageYOffset-3500})
-              }
+            }
         }else if(window.innerWidth>400){
             if((window.pageYOffset>3400) && (window.pageYOffset<3486)){
                 this.setState({titleReavealed: window.pageYOffset-3400})
             }
         }else{
             if((window.pageYOffset>3800) && (window.pageYOffset<3886)){
-                this.setState({titleToogled: true});
                 this.setState({titleReavealed: window.pageYOffset-3800})
             }
         }
@@ -132,13 +131,44 @@ class Projectpage extends React.Component {
                                     <motion.div
                                         id="concourTitle1"
                                         initial={{ y: 86 * 1.2 }}
-                                        animate={{ y: 86-this.state.titleReavealed }}>Reveal from</motion.div>
+                                        animate={{ y: 86-this.state.titleReavealed }}>Mes meilleures</motion.div>
                                 </div>
                                 <div className="col-12" id="containerConcourTitle2">
                                     <motion.div
                                         id="concourTitle2"
                                         initial={{ y: -86 * 1.2 }}
-                                        animate={{ y: this.state.titleReavealed-86 }}>the middle</motion.div>
+                                        animate={{ y: this.state.titleReavealed-86 }}>réalisations</motion.div>
+                                </div>
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-lg-6 col-md-5">
+                                            <div id="whiteCircleRecompense">
+                                                <img id="imageWhiteCircle" src={require('../img/challenge-innovation-logo.jpg')} alt="challenge-innovation-logo.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6 col-md-7">
+                                            <div id="titleRecompense">2e place aux concours Challenge Innovation 2020</div>
+                                            <div id="textRecompense">Le Challenge "Innovation Sécurité Routière" récompense
+                                                les projets portant sur la sécurité routière. Mon équipe et moi-même avons obtenu
+                                                la seconde place du concours pour notre projet Veelo. L'argent développé nous permet
+                                                aujourd'hui de développer notre projet en parallèle de nos études !</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="container" style={{marginTop: "100px"}}>
+                                    <div className="row">
+                                        <div className="col-lg-6 col-md-5">
+                                            <div id="whiteCircleRecompense">
+                                                <img id="imageWhiteCircle2" src={require('../img/innov_awards_logo.jpg')} alt="innov_awards_logo.jpg"/>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-6 col-md-7">
+                                            <div id="titleRecompense">2e prix du jury aux Graines d'Innov Awards 2017</div>
+                                            <div id="textRecompense">Ce prix a récompensé le travail de mon équipe et moi-même sur notre projet Haptic Bracelet.</div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
