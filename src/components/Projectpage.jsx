@@ -70,8 +70,8 @@ class Projectpage extends React.Component {
                 }
             }
         }else if(window.innerWidth>400){
-            if(window.pageYOffset>3400){
-                if(window.pageYOffset>3486){
+            if(window.pageYOffset>3500){
+                if(window.pageYOffset>3586){
                     this.setState({titleReavealed: 86})
                 }else {
                     this.setState({titleReavealed: window.pageYOffset-3400})
