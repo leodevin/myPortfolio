@@ -14,7 +14,7 @@ class Footer extends React.Component {
                                 <a className="at-ic" href="mailto:leonard.devincre@free.fr">
                                     <i className="fas fa-at fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                                 </a>
-                                <a className="li-ic" href="https://www.linkedin.com/in/léonard-devincre-861308151/">
+                                <a className="li-ic" href="https://www.linkedin.com/in/leonard-devincre/">
                                     <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                                 </a>
                                 <a className="li-ic" href="https://github.com/leodevin">

@@ -35,9 +35,9 @@ class Frontpage extends React.Component {
     render() {
         return (
             <motion.div
-                initial={{y:1000}}
-                animate={{y:0}}
-                transition={{delay:2.5, duration: 0.5}}
+                // initial={{y:1000}}
+                // animate={{y:0}}
+                // transition={{delay:2.5, duration: 0.5}}
                 className="cadre">
                 <div className="container">
                     <div className="row">

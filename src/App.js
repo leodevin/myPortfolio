@@ -23,9 +23,9 @@ function App() {
     return (
         <div onLoad={() => myFunction()}>
             <motion.div
-                initial={{y:0}}
-                animate={{y: -500}}
-                transition={{delay:2, duration:0.5}}
+                // initial={{y:0}}
+                // animate={{y: -500}}
+                // transition={{delay:2, duration:0.5}}
                 id="loader_background">
                 <div className="loader">
                     <svg viewBox="0 0 80 80">

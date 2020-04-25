@@ -8,9 +8,9 @@ class Navbar extends React.Component {
     render() {
         return (
             <motion.nav
-                initial={{y:1000}}
-                animate={{y:0}}
-                transition={{delay:2.5, duration: 0.5}}
+                // initial={{y:1000}}
+                // animate={{y:0}}
+                // transition={{delay:2.5, duration: 0.5}}
                 id="Home"
                 className="navbar navbar-expand-md navbar-light bg-white shadow-none myNav">
 
@@ -58,7 +58,7 @@ class Navbar extends React.Component {
                                 <a className="nav-link">Compétences</a></Link>
                         </li>
                         <li className="nav-item mx-3">
-                            <a href="https://www.linkedin.com/in/léonard-devincre-861308151/"><img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"}/></a>
+                            <a href="https://www.linkedin.com/in/leonard-devincre/"><img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"}/></a>
                         </li>
                         <li className="nav-item mx-3">
                             <a href="mailto:leonard.devincre@free.fr"><img className="icon" src={require('../img/email_icon.png')} alt={"icon"} href="#"/></a>
