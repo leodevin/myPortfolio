@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import '../css/Projectpage.css';
 import '../../node_modules/animate.css';
-import 'aos/dist/aos.css';
 
 
 class Projectpage extends React.Component {
@@ -102,13 +101,15 @@ class Projectpage extends React.Component {
                                     initial={{rotate:-37}}
                                     animate={{x:(this.state.barTransition/18), y:(this.state.barTransition/12)}}
                                     id="bar1"/>
-                                <img className="imageProjet mr-xl-5" src={require('../img/Veelo.jpg')} alt="Veelo.png"/>
+                                <img className="imageProjet mr-xl-5" src={require('../img/Veelo.png')} alt="Veelo.png"/>
                             </div>
                             <div className="col-lg-7 col-md-6">
                                 <div id="titreProjet1">Veelo</div>
-                                <div id="texteProjet1">Développement de sous gants connectés qui permettent aux livreurs à vélos de se déplacer en toute sécurité.
-                                    Notre système de communication innovant haptique envoie les informations de direction
-                                    à l’utilisateur en toute sécurité.</div>
+                                <div id="texteProjet1">Veelo est un système de géolocalisation innovant pour vélo.
+                                    Nous avons fait le pari d’utiliser des retours haptiques pour communiquer avec l’utilisateur.
+                                    Nos cyclistes peuvent ainsi être guidés de manière simple et intuitive, sans utiliser
+                                    d’appareils visuels ou auditifs. Grâce à une matrice de vibreurs disposée sur des sous gants
+                                    connectés, les utilisateurs se dirigent en toute sécurité.</div>
                             </div>
                         </div>
                     </div>

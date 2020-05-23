@@ -31,18 +31,18 @@
 }
 
 #texteProjet1{
-    padding-top: 20px;
+    padding-top: 15px;
     text-align : right;
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     width: 100%;
     color: #8F9EA5;
 }
 
 
 #texteProjet2{
-    padding-top: 20px;
+    padding-top: 15px;
     text-align : left;
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     width: 100%;
     color: #8F9EA5;
 }
