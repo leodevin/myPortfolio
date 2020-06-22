@@ -9,6 +9,7 @@
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
+    "eslint-plugin-flowtype": "^3.13.0",
     "framer-motion": "^1.11.1",
     "jquery": "^3.5.1",
     "mdbreact": "^4.27.0",
