@@ -36,7 +36,7 @@ function App() {
             <div
                 id="myDiv"
                 className="App">
-                <a className="cvButton"  href={`${process.env.PUBLIC_URL}/docs/CV_L.DEVINCRE.pdf`} target='_blank' rel='noopener' download>
+                <a className="cvButton"  href={`${process.env.PUBLIC_URL}/docs/CV_L.DEVINCRE.pdf`} rel='noopener' download>
                     <div className="textCVButton">Mon CV</div>
                     <img className="imgCV" alt="icon" src={require('../src/img/download.png')}/>
                 </a>
