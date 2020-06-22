@@ -31,9 +31,13 @@ class Projectpage extends React.Component {
             if((window.pageYOffset<2200)&&(window.pageYOffset>1700)){
                 this.setState({square2Transition: window.pageYOffset-1700});
             }
-        }else{
+        }else if(window.innerWidth>400){
             if((window.pageYOffset<3300)&&(window.pageYOffset>1800)){
                 this.setState({square2Transition: (window.pageYOffset-1500)});
+            }
+        }else{
+            if((window.pageYOffset<3700)&&(window.pageYOffset>2300)){
+                this.setState({square2Transition: (window.pageYOffset-1300)});
             }
         }
         if(window.innerWidth>1000){
@@ -73,15 +77,23 @@ class Projectpage extends React.Component {
                 if(window.pageYOffset>3586){
                     this.setState({titleReavealed: 86})
                 }else {
-                    this.setState({titleReavealed: window.pageYOffset-3400})
+                    this.setState({titleReavealed: window.pageYOffset-3500})
+                }
+            }
+        }else if(window.innerWidth>330){
+            if(window.pageYOffset>4000){
+                if(window.pageYOffset>4086){
+                    this.setState({titleReavealed: 86})
+                }else {
+                    this.setState({titleReavealed: window.pageYOffset-4000})
                 }
             }
         }else{
-            if(window.pageYOffset>3800){
-                if(window.pageYOffset>3886){
+            if(window.pageYOffset>4300){
+                if(window.pageYOffset>4386){
                     this.setState({titleReavealed: 86})
                 }else {
-                    this.setState({titleReavealed: window.pageYOffset-3800})
+                    this.setState({titleReavealed: window.pageYOffset-4300})
                 }
             }
         }

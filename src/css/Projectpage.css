@@ -92,7 +92,7 @@
     background-color: #559EED;
     position: relative;
     width: 100%;
-    padding-bottom: 300px;
+    padding-bottom: 150px;
 }
 
 #containerConcourTitle1{
@@ -233,10 +233,10 @@
     }
 
     #concourTitle1{
-        font-size: 2em;
+        font-size: 2.5em!important;
     }
     #concourTitle2{
-        font-size: 2em;
+        font-size: 2.5em!important;
     }
     #whiteCircleRecompense{
         margin: auto;
