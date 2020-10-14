@@ -33,7 +33,7 @@ class Navbar extends React.Component {
                                 offset={-70}
                                 duration= {500}
                                 clasName="nav-link">
-                                <a className="nav-link">Projets</a></Link>
+                                <a href="#top" className="nav-link">Projets</a></Link>
                         </li>
                         <li className="nav-item mx-3">
                             <Link
@@ -44,7 +44,7 @@ class Navbar extends React.Component {
                                 offset={-70}
                                 duration= {500}
                                 clasName="nav-link">
-                                <a className="nav-link">Parcours</a></Link>
+                                <a href="#top" className="nav-link">Parcours</a></Link>
                         </li>
                         <li className="nav-item mx-3">
                             <Link
@@ -55,7 +55,7 @@ class Navbar extends React.Component {
                                 offset={-70}
                                 duration= {500}
                                 clasName="nav-link">
-                                <a className="nav-link">Compétences</a></Link>
+                                <a href="#top" className="nav-link">Compétences</a></Link>
                         </li>
                         <li className="nav-item mx-3">
                             <a href="https://www.linkedin.com/in/leonard-devincre/"><img className="icon" src={require('../img/linkedin_icon.png')} alt={"icon"}/></a>
