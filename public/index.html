@@ -5,11 +5,13 @@
     <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="og:title" content="Portfolio web - Léonard Devincre" />
-    <meta name="og:type" content="Portfolio Website " />
-    <meta name="og:url" content="http://leonarddevincre.netlify.com" />
-    <meta name="og:image" content=”%PUBLIC_URL%/linkimage.png” />
-    <meta name="og:description" content="Mon site web en react !" />
+    <meta content="{{title}}" property="og:title" />
+    <meta content="article" property="og:type" />
+    <meta content="{{brief}}" property="og:description" />
+    <meta content="{{%PUBLIC_URL%/linkimage.png}}" property="og:image" />
+    <meta content="{{%PUBLIC_URL%/linkimage.png}}" itemprop="thumbnailUrl">
+    <meta content="100%" property="og:image:width" />
+    <meta content="auto" property="og:determiner" />
     <meta
       name="Portfolio de Léonard Devincre"
       content="Web site created using create-react-app"
